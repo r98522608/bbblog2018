@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block head_title %}
+{{ contact }} || {{ block.super }}
+{% endblock head_title %}
+
+{% block content %}<br>
+<a href="mailto:{{ mailhost }}">Email us</a>
+{% endblock %}

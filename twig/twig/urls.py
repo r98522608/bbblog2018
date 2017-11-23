@@ -16,6 +16,12 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from twig_blog.views import *
+
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^admin/',     admin.site.urls),
+    url(r'^$',          HomeView.as_view(template_name='base.html')),
+    url(r'^home/',      HomeView.as_view(template_name='base.html'),name="home"),
+    url(r'^contact/',   ContactView.as_view(template_name='contact.html'),name="contact"),
+    url(r'^about/',     AboutView.as_view(template_name='about.html'),name="about"),
 ]
