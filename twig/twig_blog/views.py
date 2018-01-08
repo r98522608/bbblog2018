@@ -7,6 +7,12 @@ from django.views.generic.base import TemplateView
 # Create your views here.
 
 
+class HomeView2(TemplateView):
+    myqq = True
+    # def get_context_data(self,*args,**kwargs):
+        # context = super(HomeView, self).get_context_data(*args,**kwargs)
+        # return context
+
 class HomeView(TemplateView):
     def get_context_data(self,*args,**kwargs):
         context = super(HomeView, self).get_context_data(*args,**kwargs)
